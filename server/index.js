@@ -12,7 +12,7 @@ app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
 //import userRoutes from './routes/users.js';
-//import adminRoutes from './routes/admins.js';
+import adminRoutes from './routes/admins.js';
 import authRoutes from './routes/auth.js';
 //import responseRoutes from './routes/responses.js';
 //import formRoutes from './routes/form.js';
@@ -22,7 +22,7 @@ import authRoutes from './routes/auth.js';
 
 // ROUTES
 //app.use('/api/users',userRoutes);
-//app.use('/api/admins',adminRoutes);
+app.use('/api/admins',adminRoutes);
 app.use('/api/auth',authRoutes);
 //app.use('/api/responses', responseRoutes);
 //app.use('/api/forms', formRoutes);
